@@ -1,21 +1,21 @@
 public class Main {
-
+    
     public static void main(String[] args) {
-        Fila minhaFila = new Fila(5);
-        System.out.println("Fila com capacidade 5 criada.");
+        Pilha minhaPilha = new Pilha(5);
+        System.out.println("Pilha com capacidade 5 criada.");
 
-        minhaFila.enqueue(10);
-        minhaFila.enqueue(20);
-        minhaFila.enqueue(30);
+        minhaPilha.push(10);
+        minhaPilha.push(20);
+        minhaPilha.push(30);
         System.out.println("Valores 10, 20 e 30 inseridos.");
 
-        System.out.println("Primeiro elemento da fila: " + minhaFila.peek());
+        System.out.println("Elemento no topo: " + minhaPilha.peek());
 
-        System.out.println("Removendo elementos da fila...");
-        while (!minhaFila.isEmpty()) {
-            System.out.println("Removido: " + minhaFila.dequeue());
+        System.out.println("Removendo elementos da pilha...");
+        while (!minhaPilha.isEmpty()) {
+            System.out.println("Removido: " + minhaPilha.pop());
         }
 
-        System.out.println("A fila está vazia? " + minhaFila.isEmpty());
+        System.out.println("A pilha está vazia? " + minhaPilha.isEmpty());
     }
 }
